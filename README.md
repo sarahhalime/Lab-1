@@ -48,7 +48,7 @@ The markdown format is commonly used for things like readme files, as they allow
 which allows for basic typesetting when viewed while still being a plaintext format.
 
 Below is a blank checkbox:
-- [ ] Put an X in the [ ] to mark this as done!
+- [X] Put an X in the [ ] to mark this as done!
 
 You can edit this file directly to check off these checkboxes throughout the lab to mark things as done.
 Do so now for the checkbox above.
@@ -60,7 +60,7 @@ And now, back to Fizz Buzz!
 Fizz Buzz is a game where people sit in a circle. Counting from 1 and going around the circle,
 people say one of four things for a number `i`: `Fizz`, `Buzz`, `Fizz Buzz`, or `i`.
 
-- [ ] Try a short game of Fizz Buzz with a small group of people around you!
+- [X] Try a short game of Fizz Buzz with a small group of people around you!
 
 Formally as a coding task, let `i` be a positive integer and output the following:
 
@@ -95,8 +95,9 @@ class FizzBuzz {
 
     public static void main(String[] args) {
 
-        for (int i = 1; i < 100; i++) {
-
+        // for (int i = 1; i < 100; i++) {
+        int i = 1;
+        while (i < 100) {
             // Find out which numbers divide i.
             boolean divisibleBy3 = i % 3 == 0;
             boolean divisibleBy5 = i % 5 == 0;
@@ -119,12 +120,13 @@ class FizzBuzz {
                 System.out.println(i);
 
             }
+            i++;
         }
     }
 }
 ```
 
-- [ ] Open `FizzBuzz.java` in the `src` directory and click the run button in the top left corner.
+- [X] Open `FizzBuzz.java` in the `src` directory and click the run button in the top left corner.
 
 If you don't see this button, you may need to mark `src` as the `Sources Root` for the project. You can do this
 by right-clicking the `src` directory in the `Project` tab and near the bottom of the context menu
@@ -138,13 +140,32 @@ You may never have seen Java before, but we bet you can puzzle out how it works.
 ## Task 1: Understanding some Java syntax
 
 Take a few minutes to read through this code and take guesses at what different pieces of
-the code are doing. For example, what's the Java version of Python's `and`? What's going
-on with that weird `for` loop? As you do this, you might find it useful to write down your
-own implementation in Python to help you begin to create a mapping between the two languages.
+the code are doing. For example, 
 
-- [ ] Make note of any specific Java syntax which stands out to you and compare what you
+What's the Java version of Python's `and`?
+&&
+What's going on with that weird `for` loop?
+start i at 1 itearte until 100 and increments i by one each iteration.
+
+As you do this, you might find it useful to write down your
+own implementation in Python to help you begin to create a 
+mapping between the two languages.
+&& = and
+for (int i = 1; i < 100; i++) = for i in range(1, 100)
+
+- [X] Make note of any specific Java syntax which stands out to you and compare what you
 come up with those around you. Try to come up with a list of at least five things that
 strike you as either similar to or different from Python.
+- && in Java = and in Python 
+- for (int i = 1; i < 100; i++) = for i in range(1, 100)
+- System.out.println() = print()
+- Java: { } for blocks of code, Python: indentation
+- Java statements end with ; 
+- boolean in Java = bool in Python 
+- String in Java = str in Python 
+- else if in Java = elif in Python
+- ! in Java = not in Python 
+- Java needs variable types(int, boolean)
 
 Tip: IntelliJ works just like PyCharm, so you can place breakpoints and step through the code using the debugger in the same way.
 You might find it informative to try stepping through the code to see what it is doing on a few iterations.
@@ -167,7 +188,7 @@ Later in this course, you'll learn what all that mess means, but for now it is e
 
 ### Task 1.1: Rewrite this using `while`
 
-- [ ] You've puzzled through how Java `for` and `if` statements work; now rewrite this
+- [X] You've puzzled through how Java `for` and `if` statements work; now rewrite this
 to use a `while` loop instead of a `for` loop.
 
 ## How to test this code
@@ -186,7 +207,7 @@ line or the closing brace `}` of the loop.
 
 3. Immediately, type the method name you want, maybe something like `doFizzBuzz`.
 
-- [ ] Rerun the program to verify that it still works.
+- [X] Rerun the program to verify that it still works.
 
 That's your first big IntelliJ trick! There are lots more.
 
@@ -199,7 +220,7 @@ You'll learn more about the various access modifiers in your Java readings soon.
 
 Now that you've made your first edits to your code, you should ask git to save these changes for you.
 
-- [ ] Open the Terminal tab in IntelliJ and type `git status`, it will show you that you have modified `FizzBuzz.java` (and this README too!).
+- [X] Open the Terminal tab in IntelliJ and type `git status`, it will show you that you have modified `FizzBuzz.java` (and this README too!).
 
 We will save our local changes to `FizzBuzz.java` and then push the changes to your GitHub repository using
 a sequence of three git commands:
